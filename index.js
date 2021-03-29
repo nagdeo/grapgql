@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 
 
-mongoose.connect("mongodb+srv://simmi:simmi23@cluster0.kzs1w.mongodb.net/test");
+mongoose.connect("mongodb+srv://simmi:simmi23@cluster0.kzs1w.mongodb.net/test",{ useNewUrlParser: true });
 mongoose.connection.once('open', () => {
     useUnifiedTopology: true 
     console.log("connected to database");
